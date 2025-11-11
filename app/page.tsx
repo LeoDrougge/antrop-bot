@@ -1,75 +1,14 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Loader2 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const router = useRouter();
   const [workplace, setWorkplace] = useState('');
   const [need, setNeed] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [loadingTextIndex, setLoadingTextIndex] = useState(0);
-  const [error, setError] = useState<string | null>(null);
-
-  const loadingTexts = [
-    'Kollar våra tjänster',
-    'Snokar bland case',
-    'Funderar på lösningar',
-    'Analyserar ditt behov',
-    'Brainstormar idéer',
-    'Granskar portfolio',
-    'Tar fram exempel',
-    'Kikar på strategier',
-    'Utforskar metoder',
-    'Kollar designsystem',
-    'Gräver i arkivet',
-    'Letar i verktygslådan',
-    'Studerar användardata',
-    'Skannar projekthistorik',
-    'Analyserar möjligheter',
-    'Kollar best practice',
-    'Utvärderar approach',
-    'Söker inspiration',
-    'Kartlägger lösningar',
-    'Studerar liknande case',
-    'Granskar frameworks',
-    'Kollar UX-mönster',
-    'Tänker designsystem',
-    'Utforskar koncept',
-    'Analyserar målgrupp',
-    'Kikar på tekniker',
-    'Jämför alternativ',
-    'Väger olika vägar',
-    'Kollar komponenter',
-    'Snokar i playbooken',
-    'Studerar patterns',
-    'Letar smarta lösningar',
-    'Analyserar kontext',
-    'Kollar referencias',
-    'Tänker storytelling',
-    'Utvärderar verktyg',
-    'Söker paralleller',
-    'Granskar processer',
-    'Kollar metodik',
-    'Studerar användarbehov',
-    'Analyserar värdeflöden',
-    'Kikar på interfaces',
-    'Utforskar interaktioner',
-    'Kollar tillgänglighet',
-    'Tänker användarresor',
-    'Granskar touchpoints',
-    'Studerar ekosystem',
-    'Analyserar insights',
-    'Kollar designprinciper',
-    'Letar i casestudies',
-    'Utvärderar koncept',
-    'Söker synergier',
-    'Tänker helhetsgrepp',
-    'Kollar kompetensteam',
-    'Analyserar scope',
-  ];
 
   const workplaceRef = useRef<HTMLSpanElement>(null);
   const needRef = useRef<HTMLSpanElement>(null);
@@ -88,17 +27,6 @@ export default function Home() {
   };
 
 
-  useEffect(() => {
-    if (loading) {
-      // Start with a random index
-      setLoadingTextIndex(Math.floor(Math.random() * loadingTexts.length));
-
-      const interval = setInterval(() => {
-        setLoadingTextIndex(Math.floor(Math.random() * loadingTexts.length));
-      }, 1500);
-      return () => clearInterval(interval);
-    }
-  }, [loading, loadingTexts.length]);
 
   return (
     <main 
@@ -111,9 +39,9 @@ export default function Home() {
           className="flex-1 flex items-center border-b border-dashed"
           style={{ borderColor: 'var(--outline_muted)' }}
         >
-          <a href="/" className="header-sm cursor-pointer hover:opacity-80 transition-opacity" style={{ color: 'var(--text-muted)' }}>
+          <Link href="/" className="header-sm cursor-pointer hover:opacity-80 transition-opacity" style={{ color: 'var(--text-muted)' }}>
             Antrop bot
-          </a>
+          </Link>
         </div>
         <div 
           className="flex-1 flex items-center justify-end border-b border-dashed"
@@ -134,7 +62,7 @@ export default function Home() {
             <span className="whitespace-nowrap">JAG KOMMER FRÅN</span>
             <span
               ref={workplaceRef}
-              contentEditable={!loading}
+              contentEditable
               suppressContentEditableWarning
               onInput={(e) => setWorkplace(e.currentTarget.textContent || '')}
               data-placeholder="MIN ARBETSPLATS"
@@ -162,7 +90,7 @@ export default function Home() {
             <span className="whitespace-nowrap">OCH BEHÖVER HJÄLP MED</span>
             <span
               ref={needRef}
-              contentEditable={!loading}
+              contentEditable
               suppressContentEditableWarning
               onInput={(e) => setNeed(e.currentTarget.textContent || '')}
               data-placeholder="MIN UTMANING"
@@ -192,7 +120,7 @@ export default function Home() {
           {/* Button */}
           <button
             onClick={handleSubmit}
-            disabled={!workplace || !need || loading}
+            disabled={!workplace || !need}
             className="header-sm flex items-center justify-center gap-7 px-12 py-4 rounded-full min-w-[308px] w-fit transition-opacity disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             style={{ 
               backgroundColor: 'var(--text-regular)',
@@ -200,26 +128,9 @@ export default function Home() {
               border: '1.283px solid #0f3951'
             }}
           >
-            {loading ? (
-              <>
-                <Loader2 className="h-5 w-5 animate-spin" />
-                <span className="inline-block min-w-[180px] text-left animate-pulse">
-                  {loadingTexts[loadingTextIndex]}
-                </span>
-              </>
-            ) : (
-              <>
-                <span>Se hur vi kan hjälpa dig</span>
-                <Image src="/Assets/arrow-free.svg" alt="Arrow" width={27} height={22} />
-              </>
-            )}
+            <span>Se hur vi kan hjälpa dig</span>
+            <Image src="/Assets/arrow-free.svg" alt="Arrow" width={27} height={22} />
           </button>
-
-          {error && (
-            <div className="mt-4 p-4" style={{ backgroundColor: 'var(--surface_mid)' }}>
-              <p className="text-antrop-regular" style={{ color: 'var(--text-regular)' }}>{error}</p>
-            </div>
-          )}
         </div>
 
         {/* Right Column - Image */}

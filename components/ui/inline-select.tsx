@@ -102,7 +102,7 @@ export function InlineSelect({
           sel?.removeAllRanges();
           sel?.addRange(range);
         }
-      } catch (e) {
+      } catch {
         // Ignore errors if cursor position is invalid
       }
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
+import Link from 'next/link';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 
@@ -49,7 +49,7 @@ export default function Loading() {
 
       // 2. Typewriter effect with SplitText
       if (textRef.current) {
-        const split = new SplitText(textRef.current, { type: 'chars', smartWrap: true } as any);
+        const split = new SplitText(textRef.current, { type: 'chars', smartWrap: true });
         const chars = split.chars;
 
         // Hide all chars initially
@@ -291,9 +291,9 @@ export default function Loading() {
       <div className="mx-auto flex max-w-[944px] flex-col gap-16 px-6 py-20 relative z-10">
         {/* Header */}
         <div className="flex items-center justify-between">
-          <a href="/" className="header-sm cursor-pointer hover:opacity-80 transition-opacity" style={{ color: 'var(--text-muted)' }}>
+          <Link href="/" className="header-sm cursor-pointer hover:opacity-80 transition-opacity" style={{ color: 'var(--text-muted)' }}>
             Antrop Bot
-          </a>
+          </Link>
           <p className="header-sm" style={{ color: 'var(--text-muted)' }}>
             v 0.2
           </p>
