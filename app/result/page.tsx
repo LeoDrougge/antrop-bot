@@ -421,6 +421,7 @@ export default function Result() {
             {response.approach.map((item, idx) => (
               <FramedBlock
                 key={idx}
+                hideBorderTop={idx > 0}
                 data-section="approach"
                 left={
                   <span className="header-antrop-lg" style={{ color: 'var(--text-regular)' }}>
@@ -466,6 +467,7 @@ export default function Result() {
                   }}
                 >
                   <FramedBlock
+                    hideBorderTop={idx > 0 && response.caseExamples.length > 1}
                     data-section="case"
                     left={<Image src="/Assets/arrow-right.svg" alt="Pil" width={44} height={44} />}
                     className="flex-col gap-6 md:flex-row md:gap-0 opacity-0"
