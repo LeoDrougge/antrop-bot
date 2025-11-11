@@ -1,0 +1,575 @@
+{
+  "company": {
+    "name": "Antrop",
+    "url": "https://www.antrop.se",
+    "mission": "Vi designar för en bättre värld",
+    "description": "UX och tjänstedesignbyrå i Stockholm",
+    "recognition": [
+      "Sveriges mest uppskattade konsulter inom produkt- och tjänstedesign",
+      "Guldvinnare i Årets Byrå för kundnöjdhet",
+      "Great Place to Work-certifierade"
+    ]
+  },
+  "services": [
+    {
+      "name": "Kundinsikter",
+      "category": "Research & Strategi",
+      "description": "Förstå kunders underliggande behov och drivkrafter genom kvalitativ och kvantitativ research. Insikter om din kund är ditt viktigaste fundament.",
+      "methods": ["Djupintervjuer", "Enkäter", "Fokusgrupper", "Användningstester", "Kontextuella intervjuer", "Personas", "Customer Journey Mapping"],
+      "benefits": ["Identifiera rätt problem att lösa", "Undvik dyra felaktiga antaganden", "Prioritera utveckling baserat på verkliga behov", "Bryt ner silos genom tvärgående insiktsarbete"]
+    },
+    {
+      "name": "Kundresa",
+      "category": "Research & Strategi",
+      "description": "Visualisera kundens behov och utmaningar genom hela kundresan för att flytta fokus från interna strukturer till kundens verklighet",
+      "methods": ["Inventering av befintlig kundkunskap", "Personas", "Upplevelsekartor", "Kontextuella intervjuer", "Workshop med intressenter"],
+      "benefits": ["Identifiera utmaningar i användarupplevelsen", "Prioritera utvecklingssatsningar", "Skapa organisationsalignering", "Förbättrad innovation genom gemensam förståelse"]
+    },
+    {
+      "name": "Användningstester",
+      "category": "Research & Strategi",
+      "description": "Gå från att gissa till att veta genom att ta in användarna tidigt i processen",
+      "methods": ["Formativa tester under utveckling", "Summativa tester för befintliga tjänster", "Guerillatester", "Kontextuella intervjuer", "A/B-tester"],
+      "benefits": ["Snabb feedback på vad som fungerar", "Minska risk för onödig produktutveckling", "Konkreta förbättringsförslag", "Förstå verkligt användarflöde"]
+    },
+    {
+      "name": "Tjänstedesign",
+      "category": "Research & Strategi",
+      "description": "Kunddriven affärsutveckling från insikt till implementering",
+      "methods": ["Workshops", "Prototyping", "Konceptutveckling", "Storyboards", "Testning med målgrupp"],
+      "benefits": ["Innovativa lösningar baserade på kundinsikter", "Ökad kundnöjdhet", "Förbättrad konkurrenskraft"]
+    },
+    {
+      "name": "AI Discovery",
+      "category": "Research & Strategi",
+      "description": "Utforska hur AI kan stödja framtida kundinteraktioner, tre veckors sprint från mål till genomförbara idéer",
+      "methods": ["Innovation sprint", "AI-konceptutveckling", "Genomförbarhetsbedömning"],
+      "benefits": ["Snabb AI-innovation", "Konkreta genomförbara koncept", "Identifiera AI-möjligheter"]
+    },
+    {
+      "name": "Business Design",
+      "category": "Research & Strategi",
+      "description": "Strategisk design för affärsutveckling som kombinerar design thinking med affärsstrategi",
+      "methods": ["Affärsmodellering", "Value proposition design", "Strategiska workshops"],
+      "benefits": ["Identifiera nya affärsmöjligheter", "Driva tillväxt", "Designa hållbara affärsmodeller"]
+    },
+    {
+      "name": "Systeminnovation",
+      "category": "Research & Strategi",
+      "description": "Hantera komplexa samhällsutmaningar genom att kartlägga system, aktörer och utveckla lösningar över verksamhetsgränser",
+      "methods": ["Systemkartläggning", "Aktörsanalys", "Visualisering", "Samverkansfacilitering"],
+      "benefits": ["Förståelse för helhetssystem", "Skapa förändring på systemnivå", "Hållbara systemlösningar"]
+    },
+    {
+      "name": "Cirkulär design",
+      "category": "Research & Strategi",
+      "description": "Omvandla linjära processer till cirkulära kretslopp för nya intäktsströmmar och minimerad miljöpåverkan",
+      "methods": ["Circular Discovery", "Cirkulär tjänsteutveckling", "Digitala produktpass", "Samverkansfacilitering"],
+      "benefits": ["Nya intäktsströmmar", "Minimerad miljöpåverkan", "Bidra till Agenda 2030-mål"]
+    },
+    {
+      "name": "Framsyn och spekulativ design",
+      "category": "Research & Strategi",
+      "description": "Framtidsspaning och scenarioplanering för att rusta organisationer för framtiden",
+      "methods": ["Trendanalys", "Scenarioplanering", "Framtidsprototyper", "Strategiska roadmaps"],
+      "benefits": ["Förbered för framtida förändringar", "Identifiera risker och möjligheter", "Engagerande vision"]
+    },
+    {
+      "name": "UX-design",
+      "category": "Design & Utveckling",
+      "description": "Användargränssnitt som förenas affärsmål med kundnytta, baserat på research och testning",
+      "methods": ["Wireframes", "Prototyper", "Användningstester", "Interaktionsdesign", "Informationsarkitektur"],
+      "benefits": ["Användarvänlighet ökar fortsatt användning", "Minskar utvecklingskostnader", "Förebygger dyra ändringar"]
+    },
+    {
+      "name": "Digital design",
+      "category": "Design & Utveckling",
+      "description": "Webb- och appdesign som kombinerar UX-expertis med prisad visuell design",
+      "methods": ["Visuell design", "UI-design", "Design sprints", "Iterativ testning"],
+      "benefits": ["Ökad konvertering", "Stärkt varumärke", "Förbättrad kundlojalitet"]
+    },
+    {
+      "name": "Designsystem",
+      "category": "Design & Utveckling",
+      "description": "Komponentbibliotek och designtokens för konsekvent design över alla digitala kanaler",
+      "methods": ["Komponentbibliotek", "Design tokens", "Style guides", "Dokumentation"],
+      "benefits": ["Snabbare utveckling", "Konsekvent användarupplevelse", "Enkel skalbarhet"]
+    },
+    {
+      "name": "Digital tillgänglighet",
+      "category": "Design & Utveckling",
+      "description": "WCAG-anpassad design och granskning så digitala tjänster kan användas av alla, inklusive personer med funktionsnedsättningar. Ny lag träder i kraft 28 juni 2025",
+      "methods": ["WCAG-granskning", "Manuell och automatisk testning", "Tillgänglighetsutbildning", "Användningstester med personer med funktionsnedsättning", "Klarspråksgranskning"],
+      "benefits": ["Uppfylla lagkrav från juni 2025", "Öka räckvidd till alla användare", "Förbättrad UX för alla", "Visa socialt ansvarstagande"]
+    },
+    {
+      "name": "Beteendedesign",
+      "category": "Design & Utveckling",
+      "description": "Design som påverkar användarbeteende positivt genom beteendevetenskapliga insikter, baserat på Kahneman och Thalers forskning",
+      "methods": ["Beslutsarkitektur", "Nudging", "A/B-testning", "Segmentering"],
+      "benefits": ["Förstärk hållbara beteenden", "Förbättrat beslutsfattande", "Ökad konvertering"]
+    },
+    {
+      "name": "Innovationsledning",
+      "category": "Kapacitetsbyggande",
+      "description": "Ledarskap för att bygga långsiktig innovationsförmåga i organisationer",
+      "methods": ["Innovationslabb", "Design Thinking", "Innovationsprocesser", "Kultur- och kompetensutveckling"],
+      "benefits": ["Långsiktig innovationsstrategi", "Bygga innovationskultur", "Mätbart värde"]
+    },
+    {
+      "name": "Innovationslabb",
+      "category": "Kapacitetsbyggande",
+      "description": "Fysisk eller virtuell arena för att accelerera innovationstakten och höja innovationshöjden i organisationen",
+      "methods": ["Idéinsamling och prioritering", "Konceptutvärdering", "Målgruppsvalidering", "Experimenterande miljö för testning och lärande"],
+      "benefits": ["Ökad innovationstakt och höjd", "Systematiskt och målstyrt innovationsarbete", "Bygga organisationens designförmåga", "Frizon för experimentation"]
+    },
+    {
+      "name": "Kunddrivet arbetssätt",
+      "category": "Kapacitetsbyggande",
+      "description": "Transformation till kunddrivet arbetssätt med rätt balans mellan användarbehov, affär och teknik",
+      "methods": ["Gap-analys", "Processutveckling", "Kompetenskartering", "Utbildning", "Coachning"],
+      "benefits": ["Utveckla rätt lösningar", "Spara utvecklingskostnader", "Attrahera och behålla kunder"]
+    },
+    {
+      "name": "Digital hållbarhet",
+      "category": "Kapacitetsbyggande",
+      "description": "Onlinekurs (6-8 timmar) i att minska digitala tjänsters miljöpåverkan. Pris: 8 495 kr exkl. moms",
+      "methods": ["Energioptimering", "Hållbar UX", "Innehållsstrategi", "Mätning av digitalt avtryck"],
+      "benefits": ["Minska energiförbrukning", "Snabbare tjänster", "Bidra till hållbarhetsmål"]
+    }
+  ],
+  "cases": [
+    {
+      "title": "Bo en dag i år 2050 – Hur strategisk framsyn kan omforma framtidens bostadssektor",
+      "client": "ShiftSweden",
+      "sector": "Fastighet",
+      "services": ["Framsyn och spekulativ design"],
+      "challenge": "Klimatförändringars påverkan på bostadssektorn översattes inte till handling. Beslutsfattare saknade känslomässigt engagemang för systemförändringar.",
+      "outcome": "Skapade en uppslukande framtidsprototyp-lägenhet från 2050 där 100 deltagare upplevde resursbrist. 94% tänker nu på klimatförändringar veckovis (vs 58% tidigare).",
+      "url": "https://antrop.se/case/bo-en-dag-i-ar-2050-hur-strategisk-framsyn-kan-omforma-framtidens-bostadssektor/"
+    },
+    {
+      "title": "SJ:s designsystem omformar framtidens resande",
+      "client": "SJ",
+      "sector": "Transport",
+      "services": ["Tjänstedesign", "UX-design", "Designsystem"],
+      "challenge": "SJ hade fragmentering över digitala kanaler med 40 olika versioner av den gröna knappen och inkonsekvent komponentutveckling.",
+      "outcome": "Implementerade ett publikt designsystem. Inom två år hade 20 olika system adopterat designsystemet.",
+      "url": "https://antrop.se/case/sjs-designsystem-omformar-framtidens-resande/"
+    },
+    {
+      "title": "Uppsala kommun – en webb som möter invånarnas behov",
+      "client": "Uppsala kommun",
+      "sector": "Offentlig",
+      "services": ["Tjänstedesign"],
+      "challenge": "Uppsala kommun hade fragmenterad digital närvaro med silobaserade avdelningar som saknade användarcentrerat perspektiv.",
+      "outcome": "Lanserade pilotprojekt för vuxenutbildning i januari 2025 med förbättrad tillgänglighet. Hela webbenheten antog ny kollaborativ, användarcentrerad arbetsmetod.",
+      "url": "https://antrop.se/case/uppsala-kommun-en-webb-som-moter-invanarnas-behov/"
+    },
+    {
+      "title": "Nya vägar till digitalisering av allmännyttan",
+      "client": "Bostads AB Mimer",
+      "sector": "Fastighet",
+      "services": ["Digital design", "Tjänstedesign", "UX-design"],
+      "challenge": "Bostads AB Mimer stod inför slutet av deras äldre fastighetssystem. De behövde välja mellan köp av kommersiellt system eller egen utveckling.",
+      "outcome": "Utvecklade ONECore, en modulär digital plattform byggd på öppen källkod med öppna API:er. Automatiserad parkeringsuthyrning och enhetlig kommunikation.",
+      "url": "https://antrop.se/case/nya-vagar-till-digitalisering-av-allmannyttan/"
+    },
+    {
+      "title": "Värvningskontoret 2035",
+      "client": "Vinnova",
+      "sector": "Offentlig",
+      "services": ["Framsyn och spekulativ design"],
+      "challenge": "Demonstrera kopplingen mellan dåliga matvanor och Sveriges framtida försvarskapacitet för att driva beteendeförändring.",
+      "outcome": "Skapade en uppslukande prototypcontainer som lockade 400+ besökare, genererade politiskt engagemang och mediebevakning i SVT, Aftonbladet, DN.",
+      "url": "https://antrop.se/case/varvningskontoret/"
+    },
+    {
+      "title": "Regulatoriska sandlådor – ett kraftfullt verktyg för innovation på samhällsnivå",
+      "client": "Vinnova",
+      "sector": "Innovation",
+      "services": ["Tjänstedesign"],
+      "challenge": "Utveckla ett omfattande förslag för implementering av regulatoriska sandlådor för netto-noll teknologier i Sverige.",
+      "outcome": "Skapade en tydlig implementeringsfärdplan för Sveriges regulatoriska sandlådeinitiativ, med intressentkartläggning och formell rapport publicerad av Vinnova.",
+      "url": "https://antrop.se/case/regulatoriska-sandlador-ett-kraftfullt-verktyg-for-innovation-pa-samhallsniva/"
+    },
+    {
+      "title": "Naturgård 2038",
+      "client": "Vinnova",
+      "sector": "Jordbruk",
+      "services": ["Framsyn och spekulativ design"],
+      "challenge": "Svenskt jordbruk står inför kritiska utmaningar med åldrande arbetskraft (medianålder 56), lönsamhetsproblem och miljöpåverkan.",
+      "outcome": "Skapade 'Naturgård 2038', en provocerande prototyp som visades för 500 studenter. Över 95% uttryckte intresse för framtida jordbrukskarriärer.",
+      "url": "https://antrop.se/case/naturgard-2038/"
+    },
+    {
+      "title": "Länsförsäkringar Fastighetsförmedling",
+      "client": "Länsförsäkringar Fastighetsförmedling",
+      "sector": "Fastighet",
+      "services": ["Tjänstedesign", "Kundinsikter"],
+      "challenge": "Länsförsäkringar Fastighetsförmedling sökte fördjupa kundförståelse och förbättra köparupplevelsen över 200 regionala kontor.",
+      "outcome": "Utveckling av extern kundresa och beteendepersonas ledde till förbättrade NPS-poäng och lansering av 'LFF Way of Working'.",
+      "url": "https://antrop.se/case/lansforsakringar-fastighetsformedling/"
+    },
+    {
+      "title": "Uppskalning av Ingka Centres cirkulära koncept",
+      "client": "Ingka",
+      "sector": "Retail",
+      "services": ["Kundinsikter", "Business Design", "Cirkulär design", "Tjänstedesign"],
+      "challenge": "Ingka Centres behövde expandera sitt cirkulära retailkoncept Circuit till globala marknader och förstå marknadsberedskap.",
+      "outcome": "Genomförde marknadsundersökning över fyra platser och utvecklade lokaliserade Circuit-rekommendationer. Studien visade 'starkt intresse för Circuit över alla fyra marknader'.",
+      "url": "https://antrop.se/case/ingka/"
+    },
+    {
+      "title": "Framtidens turism",
+      "client": "Tillväxtverket",
+      "sector": "Turism",
+      "services": ["Framsyn och spekulativ design", "Tjänstedesign"],
+      "challenge": "Svensk turistnäring behövde förberedas för betydande förändringar driven av klimatskifte, demografiska trender och förändrade resemönster.",
+      "outcome": "Utvecklade omfattande verktygslåda med kunskapsbank, toolkit för strategisk framsyn, digitala träningsmoduler och två kontrasterande 2040-scenarios.",
+      "url": "https://antrop.se/case/framtidens-turism/"
+    },
+    {
+      "title": "Innovation för ett hållbart samhällsbyggande",
+      "client": "Svensk Byggtjänst",
+      "sector": "Bygg",
+      "services": ["Innovationsledning"],
+      "challenge": "Svensk Byggtjänst behövde stärka sin innovationsförmåga för att bibehålla marknadsledarskap när byggbranschen krävde högre hållbarhet och digitalisering.",
+      "outcome": "Etablerade strukturerad innovationsprocess med idéportal, definierade roller, tränade anställda i design thinking och fostrade kreativ kultur.",
+      "url": "https://antrop.se/case/innovation-for-ett-hallbart-samhallsbyggande/"
+    },
+    {
+      "title": "En kanalstrategi för smartare internkommunikation",
+      "client": "Detaljhandelsföretag",
+      "sector": "Retail",
+      "services": ["Tjänstedesign"],
+      "challenge": "Ett stort detaljhandelsföretag med ~10,000 anställda kämpade med intern kommunikation. Osäkerhet ledde till informationsöverbelastning.",
+      "outcome": "Utvecklade intern kanalstrategi som klargjorde kommunikationssyften, definierade ansvar och etablerade riktlinjer för kanalval.",
+      "url": "https://antrop.se/case/en-kanalstrategi-for-smartare-internkommunikation/"
+    },
+    {
+      "title": "Ny webbdesign till Svensk Adressändring",
+      "client": "Svensk Adressändring",
+      "sector": "Logistik",
+      "services": ["Digital design", "Designsystem"],
+      "challenge": "Svensk Adressändring behövde översätta sin nya varumärkesidentitet till webbdesign och implementera den över hela externa webbplatsen.",
+      "outcome": "Skapade modern, användarvänlig design med förbättrad användarupplevelse. Ett designsystem etablerades för konsistens över alla digitala kontaktytor.",
+      "url": "https://antrop.se/case/ny-webbdesign-till-svensk-adressandring/"
+    },
+    {
+      "title": "Från statiska pdf-rapporter till levande webb",
+      "client": "SCB",
+      "sector": "Offentlig",
+      "services": ["Digital design", "Kundinsikter", "Designsystem"],
+      "challenge": "SCB behövde transformera statiska PDF-rapporter till användarvänliga webbpublikationer för att nå fler användare och öka statistikanvändningen.",
+      "outcome": "Skapade interaktiva webbpublikationer som låter expertanvändare enkelt hitta, analysera och ladda ner statistik. Integrerade designstöd i SCB:s designsystem.",
+      "url": "https://antrop.se/case/fran-statiska-pdf-rapporter-till-levande-webb/"
+    },
+    {
+      "title": "Tjänstedesign för mikromeriter i Skåne",
+      "client": "Region Skåne",
+      "sector": "Offentlig",
+      "services": ["Tjänstedesign", "Kundinsikter", "Systeminnovation"],
+      "challenge": "Region Skåne behövde förstå mikromeritssystemet och användarbehov för att utveckla lösningar för kompetensvärdering.",
+      "outcome": "Levererade solid grund för mikromeritsutveckling med systemkartläggning, fyra användarpersonas, visualisering av användarresor och konkret scenario.",
+      "url": "https://antrop.se/case/tjanstedesign-for-mikromeriter-i-skane/"
+    },
+    {
+      "title": "Stödet för människor med psykisk ohälsa får aldrig ha stängt",
+      "client": "Mind",
+      "sector": "Ideell",
+      "services": ["UX-design", "Digital design"],
+      "challenge": "Psykisk ohälsa är ett växande folkhälsoproblem i Sverige. Mind behövde en digital tjänst för att sänka trösklar till att söka hjälp och erbjuda stöd 24/7.",
+      "outcome": "Utvecklade 'Stöd & Kunskap' med känslomässig ingångspunkt, kunskapsresurser, chattforum för peerstöd och tillgänglig design som skapar välkomnande, icke-stigmatiserande miljö.",
+      "url": "https://antrop.se/case/stod-kunskap-minds-nya-digitala-tjanst-for-stod-vid-psykisk-ohalsa/"
+    },
+    {
+      "title": "Visuell identitet för en levande planet",
+      "client": "Ecogain",
+      "sector": "Hållbarhet",
+      "services": ["Digital design"],
+      "challenge": "Ecogain behövde en mer professionell varumärkesidentitet som speglade deras ledarskap inom grön omställning och biologisk mångfald.",
+      "outcome": "Utvecklade omfattande visuell identitet med naturinspirerade grafiska element organiserade efter årstider. Ny webbplats med förbättrad användarupplevelse och tillgänglighet.",
+      "url": "https://antrop.se/case/ecogain/"
+    },
+    {
+      "title": "One Stop Myndighetsshop skapar väg för radikal innovation i matsektorn",
+      "client": "Tillväxtverket",
+      "sector": "Livsmedel",
+      "services": ["Tjänstedesign", "Systeminnovation"],
+      "challenge": "Svenska livsmedelsföretag med radikala innovationer mötte stora regulatoriska hinder och långa myndighetsprocesser med fragmenterade processer.",
+      "outcome": "Utvecklade 'One Stop Myndighetsshop' - en tvärorganisatorisk samarbetsmodell där en guide hjälper innovativa företag navigera regulatoriska krav.",
+      "url": "https://antrop.se/case/banbrytande-arbetssatt-skapar-vag-for-radikal-innovation-i-matsektorn/"
+    },
+    {
+      "title": "Produktpass som möjliggörare för cirkulära möbelflöden",
+      "client": "Chalmers Industriteknik och Rise",
+      "sector": "Möbler",
+      "services": ["Cirkulär design", "Kundinsikter", "Digital design", "Framsyn och spekulativ design"],
+      "challenge": "Förbereda svensk möbelindustri för digitala produktpass och utveckla koncept för att stimulera cirkulära materialflöden.",
+      "outcome": "Skapade prototyper och genomförde användartester. Identifierade prioriterade funktioner som reservdelsinformation och validerade värdet av användarredigerbara reparationshistorik.",
+      "url": "https://antrop.se/case/produktpass-som-mojliggorare-for-cirkulara-mobelfloden/"
+    },
+    {
+      "title": "Ny visuell identitet till Adda",
+      "client": "Adda",
+      "sector": "Offentlig",
+      "services": ["Digital design"],
+      "challenge": "Adda behövde konsolidera flera varumärkesidentiteter till ett enhetligt varumärke och uppdatera visuell identitet för att stärka organisationen.",
+      "outcome": "Skapade nytt visuellt identitetssystem med uppdaterad logotyp, färgpalett, designprinciper, grafisk manual, digital stilguide och mallar för sociala medier.",
+      "url": "https://antrop.se/case/adda/"
+    },
+    {
+      "title": "Ökad konvertering av morötter",
+      "client": "Morot & Co",
+      "sector": "E-handel",
+      "services": ["Digital design", "Kundinsikter", "Digital tillgänglighet"],
+      "challenge": "Morot & Co behövde öka onlineköp genom förbättrad webbkonvertering samtidigt som de uppfyllde WCAG-tillgänglighetsstandarder.",
+      "outcome": "Levererade ny visuell identitet och designsystem som förenklade köpflödet, lyfte produktsynlighet, skapade premiumupplevelse och inkluderade riktlinjer för hållbar webb.",
+      "url": "https://antrop.se/case/okad-konvertering-av-morotter/"
+    },
+    {
+      "title": "Grön och rättvis omställning av textilsektorn i Bangladesh",
+      "client": "Sida",
+      "sector": "Textil",
+      "services": ["Innovationsledning", "Tjänstedesign", "Systeminnovation"],
+      "challenge": "Bangladeshs textilsektor behövde accelerera grön och rättvis omställning för att möta hållbarhetskrav samtidigt som miljontals arbetstillfällen bevaras.",
+      "outcome": "Genomförde omfattande forskning, tillämpade ADKAR-modellen och utvecklade digital prototypverktyg som hjälper fabriksägare filtrera gröna teknologier anpassade efter deras produktion.",
+      "url": "https://antrop.se/case/gron-och-rattvis-omstallning-av-textilsektorn-i-bangladesh/"
+    },
+    {
+      "title": "AI-Discovery: Hur kan AI stötta framtidens kundmöte?",
+      "client": "Försäkringskassan",
+      "sector": "Offentlig",
+      "services": ["AI Discovery", "Kundinsikter"],
+      "challenge": "Utforska hur AI-verktyg kan förbättra interaktioner mellan medborgare och svenska myndigheter för att förbättra personalisering, effektivitet och automation.",
+      "outcome": "Levererade AI-idékarta med 15 koncept riktade mot tre användargrupper (handläggare, medborgare, läkare) med visualiserade scenarier.",
+      "url": "https://antrop.se/case/ai-discovery-hur-kan-ai-stotta-framtidens-kundmote/"
+    },
+    {
+      "title": "Handlingsplan för att bygga en kunddriven organisation",
+      "client": "Axfood IT",
+      "sector": "Retail",
+      "services": ["Kunddrivet arbetssätt"],
+      "challenge": "Axfood IT behövde bygga intern kapacitet för kunddrivet arbetssätt. Trots starka utvecklingsresurser var expertis beroende av externa konsulter.",
+      "outcome": "Levererade konkret handlingsplan och färdplan för fasad transformation mot kundcentrerad organisation med processer för systematisk kundinsiktsinhämtning och internutbildning.",
+      "url": "https://antrop.se/case/handlingsplan-for-att-bygga-en-kunddriven-organisation/"
+    },
+    {
+      "title": "Redesign och nytt innehåll för Sveas betallösningar",
+      "client": "Svea Bank",
+      "sector": "Finans",
+      "services": ["Digital design", "UX-design", "Innehållsstrategi"],
+      "challenge": "Svea Bank behövde modernisera sin betalningsplattform för att kännas mer som fintech än traditionell bank samtidigt som varumärkeskännedom skulle bibehållas.",
+      "outcome": "Efter lansering sjönk bounce rate med 40% och engagement ökade med 38%. Användare fick förbättrad förståelse för betalningsalternativ och längre sessionstid.",
+      "url": "https://antrop.se/case/redesign-och-nytt-innehall-for-sveas-betallosningar/"
+    },
+    {
+      "title": "Transportstyrelsen – kunddrivet arbetssätt",
+      "client": "Transportstyrelsen",
+      "sector": "Offentlig",
+      "services": ["Organisationsutveckling", "Kunddrivet arbetssätt"],
+      "challenge": "Transportstyrelsen behövde skala kundfokus över 2,000 anställda och bädda in kundcentrerade metoder i det dagliga arbetet istället för att förlita sig på enstaka champions.",
+      "outcome": "Antrop utbildade 118 chefer över hela organisationen med ADKAR förändringsmodellen, handlingsplanering och individuell coaching för att driva kundfokus i sina enheter.",
+      "url": "https://antrop.se/case/transportstyrelsen-kunddrivet-arbetssatt/"
+    },
+    {
+      "title": "Rätt stöd i rätt tid till utsatta för sexuellt våld",
+      "client": "ChildX",
+      "sector": "Ideell",
+      "services": ["Tjänstedesign", "Systeminnovation", "Research"],
+      "challenge": "Sveriges stödsystem för barn som utsatts för sexuellt våld är fragmenterat och svåråtkomligt. Många undviker anmälan av rädsla för polisanmälan.",
+      "outcome": "Skapade systemkartläggning som identifierade fyra nyckelområden för förändring, baserad på över 200 enkätsvar, 10 djupintervjuer och 15+ myndighetsrepresentanter.",
+      "url": "https://antrop.se/case/kartlaggning-for-att-stoppa-sexuellt-vald/"
+    },
+    {
+      "title": "Vård på kvinnors villkor utan väntan",
+      "client": "EsterCare",
+      "sector": "Vård",
+      "services": ["Digital design", "Visuell identitet", "Webbutveckling"],
+      "challenge": "Kvinnor mötte långa väntetider för gynekologisk vård. EsterCare behövde en digital plattform för att kommunicera tillgänglighet och attrahera patienter.",
+      "outcome": "Lanserade skalbar webbplats hösten 2022 med flexibel struktur för kampanjsidor, vilket hjälpte kvinnor att snabbt få specialistvård utan väntetider.",
+      "url": "https://antrop.se/case/vard-pa-kvinnors-villkor-utan-vantan/"
+    },
+    {
+      "title": "Säg hej till en helt ny ungdomsjour!",
+      "client": "Ungdomsjouren Trust",
+      "sector": "Ideell",
+      "services": ["Visuell identitet", "Varumärkesplattform", "Namngivning"],
+      "challenge": "Research visade att behovet var bredare än bara tjejjour - ungdomar behövde stöd för stress, oro och relationsproblem.",
+      "outcome": "Skapade komplett varumärkesidentitet 'Trust' med tillgänglig design, gratis typsnitt och anpassade färg/stickerbibliotek för enkel spridning av volontärer.",
+      "url": "https://antrop.se/case/trust-sag-hej-till-en-helt-ny-ungdomsjour/"
+    },
+    {
+      "title": "En vård som hänger ihop hos Doktor.se",
+      "client": "doktor.se",
+      "sector": "Vård",
+      "services": ["Tjänstedesign", "Business Design", "Kundinsikter"],
+      "challenge": "Ingen vårdgivare hade lyckats skapa integrerad vård över fysiska och digitala kontaktpunkter. Doktor.se behövde förstå patientbehov för prioritering.",
+      "outcome": "Utvecklade omfattande kundresor och effektbedömningar som skapade samstämmighet mellan vård- och produktteam för prioritering av förbättringar.",
+      "url": "https://antrop.se/case/doktor-se/"
+    },
+    {
+      "title": "Ett nytt sätt att spara till ditt framtida du",
+      "client": "NoWo",
+      "sector": "Finans",
+      "services": ["Visuell identitet", "Digital design", "UX-design", "Tjänstedesign"],
+      "challenge": "Kunder upplevde onboarding-processen som komplicerad och oinbjudande vilket avskräckte från att börja spara till pension.",
+      "outcome": "Efter omdesignen ökade kundengagemanget med fler som sparar långsiktigt. NoWo såg 'en stor förändring i hur nuvarande kunder sparar' och attraherade nya sparare.",
+      "url": "https://antrop.se/case/nowo-ett-nytt-satt-att-spara-till-ditt-framtida-du/"
+    },
+    {
+      "title": "Pistat för en organisation med fokus på kunderna",
+      "client": "Idre Fjäll",
+      "sector": "Turism",
+      "services": ["Tjänstedesign", "Kundinsikter"],
+      "challenge": "Idre Fjäll, en stiftelse med expansionsplaner, behövde förstå sina kunder bättre och samla intern kunskap för att verkställa tillväxtplaner effektivt.",
+      "outcome": "Skapade beteendepersonas, kundresor och framtidsinsikter. Utbildade tolv medarbetare i tjänstedesign för fortsatt självständigt kundcentrerat arbete.",
+      "url": "https://antrop.se/case/idre-pistat-for-en-organisation-med-fokus-pa-kunderna/"
+    },
+    {
+      "title": "Nu designar vi ett hållbart system för skolmat",
+      "client": "Livsmedelsverket & Vinnova",
+      "sector": "Offentlig",
+      "services": ["Systeminnovation", "Policydesign", "Tjänstedesign"],
+      "challenge": "Hur kan Sverige designa ett hållbart skolmåltidssystem som samtidigt adresserar klimat, folkhälsa och social jämlikhet?",
+      "outcome": "Genomförde 80+ intervjuer och skapade systemkarta. Fyra kommuner valdes för pilotprojekt med hållbar upphandling, utbildning och elevengagemang för nationell skalning.",
+      "url": "https://antrop.se/case/nu-designar-vi-ett-hallbart-system-for-skolmat/"
+    },
+    {
+      "title": "Effektkartläggning för bättre prioriteringar",
+      "client": "Skatteverket",
+      "sector": "Offentlig",
+      "services": ["Tjänstedesign", "Kundinsikter", "Kommunikation"],
+      "challenge": "Skatteverkets kundmötesavdelning saknade struktur för att prioritera vilka digitala förbättringar som skulle implementeras för olika användargrupper.",
+      "outcome": "Utvecklade effektkartläggningsramverk baserat på 25 djupintervjuer med tre användarbeteendetyper. Verktyget finns i både visuellt (Figma) och operativt (Excel) format.",
+      "url": "https://antrop.se/case/effektkartlaggning-for-battre-prioriteringar/"
+    },
+    {
+      "title": "Beteendeförändring för minskad nedskräpning",
+      "client": "Naturvårdsverket",
+      "sector": "Offentlig",
+      "services": ["Beteendedesign", "Tjänstedesign", "Systeminnovation", "Policydesign", "Cirkulär design"],
+      "challenge": "Cirka åtta miljoner ton plast hamnar i haven årligen. Naturvårdsverket behövde förstå hur man minskar nedskräpning av engångsförpackningar.",
+      "outcome": "Genom iterativ research och prototyping identifierade Antrop beteendebarriärer och utvecklade två policyförslag som testades med producenter och bransch.",
+      "url": "https://antrop.se/case/beteendeforandring-for-minskad-nedskrapning/"
+    },
+    {
+      "title": "Tjänst som skapar möjligheter för nyanlända",
+      "client": "Just Arrived",
+      "sector": "Integration",
+      "services": ["Tjänstedesign", "Digital design", "Designsystem"],
+      "challenge": "Nyanlända i Sverige mötte betydande hinder på arbetsmarknaden och förlorade motivation under väntan på migrationsbesked. Företag kämpade med långa valideringsprocesser.",
+      "outcome": "Inom 15 månader efter lansering (september 2016) förmedlade Just Arrived över 500 jobb, nådde 4,000 användare från 120+ länder och 200 betalande klienter.",
+      "url": "https://antrop.se/case/tjanst-som-skapar-mojligheter-for-nyanlanda/"
+    },
+    {
+      "title": "Stöd för barn i kontakt med socialtjänsten",
+      "client": "Socialstyrelsen",
+      "sector": "Offentlig",
+      "services": ["Tjänstedesign", "UX-design", "Visuell identitet", "Research"],
+      "challenge": "Barn och unga i kontakt med socialtjänsten saknade konsekvent tillgång till begriplig information om processen, oavsett plats. Utan ordentlig information kunde unga inte delta meningsfullt i beslut.",
+      "outcome": "Omdesignade 'Koll på soc' baserat på forskning med 450 barn. Ny digital plattform presenterar socialtjänstprocessen genom tydliga visuella steg och anpassat innehåll.",
+      "url": "https://antrop.se/case/stod-for-barn-i-kontakt-med-socialtjansten/"
+    },
+    {
+      "title": "Drivkraften att dricka lagom är grunden för Systembolagets app Måttfull",
+      "client": "Systembolaget",
+      "sector": "Offentlig",
+      "services": ["Digital design", "UX-design", "Research"],
+      "challenge": "Systembolaget behövde återskapa en populär alkoholmedvetenhetsapp som tagits bort från appbutiker. Den gamla appens fokus på promillenivåer fungerade inte och de behövde identifiera rätt målgrupp.",
+      "outcome": "Den omdesignade Måttfull-appen fick 4.8/5 stjärnor i appbutiker. Användare uppskattar både funktionalitet och design för att stödja måttliga dryckesvanor.",
+      "url": "https://antrop.se/case/drivkraften-att-dricka-lagom-ar-grunden-for-systembolagets-app-mattfull/"
+    },
+    {
+      "title": "Cirkulär omställning av e-handelsleveranser",
+      "client": "LOOP + Axfoundation + Svenska Retursystem",
+      "sector": "E-handel",
+      "services": ["Systeminnovation", "Cirkulär design"],
+      "challenge": "Växande e-handel genererar enorma mängder pappåsar som varken återvinns eller återanvänds i skalan som krävs för cirkulär ekonomi. Kundfrustrationen växer från ackumulerad engångsförpackning.",
+      "outcome": "Utvecklade 'Returbar', en hypotes för återanvändbart påssystem. Projektet pausat men lyfte cirkulär förpackning på dagordningen för livsmedelsbranschen med värdefulla insikter.",
+      "url": "https://antrop.se/case/frustration-som-drivkraft-for-en-cirkular-omstallning-av-e-handelsleveranser/"
+    },
+    {
+      "title": "Appen som ger en knuff mot en hållbar livsstil",
+      "client": "Deedster",
+      "sector": "Klimat",
+      "services": ["Digital design", "Visuell identitet", "Tjänstedesign", "Research"],
+      "challenge": "Deedster behövde skapa en intuitiv plattform som hjälper användare förstå sitt koldioxidavtryck och anta hållbara konsumtionsvanor utan befintlig kunddata.",
+      "outcome": "Lanserade framgångsrikt 2018 med stark varumärkesidentitet och värdeerbjudande. Appen fick positiv användarfeedback och vann Almi Sustainable Startup award.",
+      "url": "https://antrop.se/case/appen-som-ger-en-knuff-mot-en-hallbar-livsstil/"
+    },
+    {
+      "title": "Från kundinsikter till användarvänlig app",
+      "client": "Menigo",
+      "sector": "Grossist",
+      "services": ["Digital design", "Designsystem", "Research", "Webbutveckling"],
+      "challenge": "Menigos digitala utbud hade blivit fragmenterat med växande verksamhet. Kunder krävde förbättrad användbarhet och konsolidering av digitala verktyg.",
+      "outcome": "Lanserade app september 2021 som signifikant förbättrade kundnöjdhet, särskilt i leveransspårning som tidigare hade låg tillfredsställelse. Minskade friktion i dagliga arbetsflöden.",
+      "url": "https://antrop.se/case/fran-kundinsikter-till-anvandarvanlig-app/"
+    },
+    {
+      "title": "Insiktsarbete ledde till succéstudio",
+      "client": "Stim",
+      "sector": "Musik",
+      "services": ["Tjänstedesign", "Research", "Innovationsledning"],
+      "challenge": "Stim behövde förbli relevant för unga låtskrivare mitt i branschförändringar och ny konkurrens. De behövde förstå unga artisters behov bortom traditionell rättighetshantering.",
+      "outcome": "Lanserade Stim Music Room juni 2019 - gratis samarbetsutrymme med studior, mentorskap och nätverk. Fullbokat från dag ett, vann Sweden's Design S Award 2020, över 1,500 besök första året.",
+      "url": "https://antrop.se/case/insiktsarbete-ledde-till-succestudio/"
+    },
+    {
+      "title": "En mer cirkulär fiskeribransch tack vare producentansvar",
+      "client": "HaV",
+      "sector": "Fiske",
+      "services": ["Policydesign", "Systeminnovation", "Cirkulär design"],
+      "challenge": "Upp till 85% av EU:s marint skräp är plast, varav 27% kommer från fiskeutrustning. Sverige behövde redesigna fiskerisektorns system genom producentansvar.",
+      "outcome": "Levererade omfattande rekommendationer för cirkulärt fiske med idébank för sektorstransformation. Engagerade tidigare icke-involverade fritidsfiskproducenter och fostrade förståelse för nya regelverk.",
+      "url": "https://antrop.se/case/en-mer-cirkular-fiskeribransch-tack-vare-producentansvar/"
+    },
+    {
+      "title": "Digital tjänst som stöttar när en livskamrat dör",
+      "client": "Efterlevandeguiden",
+      "sector": "Offentlig",
+      "services": ["Tjänstedesign", "Digital design", "UX-design", "Kommunikation"],
+      "challenge": "När man förlorar en livskamrat måste man kontakta flera myndigheter under sorgen. Många finner detta överväldigande när de påverkas emotionellt av förlusten.",
+      "outcome": "Tre myndigheter lanserade Efterlevandeguiden.se, en digital tjänst med praktisk vägledning för efterlevande. Fick utmärkelser från Internetworlds Top 100 och InUse Awards.",
+      "url": "https://antrop.se/case/digital-tjanst-som-stottar-nar-en-livskamrat-dor/"
+    },
+    {
+      "title": "Webbappen som ändrar din världsbild",
+      "client": "Gapminder",
+      "sector": "Ideell",
+      "services": ["Digital design", "Kundinsikter", "Webb- och apputveckling"],
+      "challenge": "Gapminder behövde skapa ett engagerande digitalt verktyg för att bekämpa missuppfattningar om global utveckling och göra fakta tillgänglig för användare 16-33 år.",
+      "outcome": "'Worldview Upgrader' lanserades hösten 2020, har samlat över 4 miljoner besvarade frågor och fått internationellt erkännande, inklusive Bill Gates endorsement.",
+      "url": "https://antrop.se/case/webbappen-som-andrar-din-varldsbild/"
+    },
+    {
+      "title": "Kundinsikter ledde till mer lättnavigerad e-handel för Åhléns",
+      "client": "Åhlens",
+      "sector": "E-handel",
+      "services": ["Digital design", "Kundinsikter", "Användningstester"],
+      "challenge": "Åhléns behövde förbättra e-handelsplattformens navigation. Med omfattande produktkatalog spännande mode, hem och skönhet kämpade kunder med att enkelt hitta varor.",
+      "outcome": "Utvecklade ny navigationsstruktur och design genom intensiv forskning. Validerade förbättringar genom iterativ prototyping med riktiga användare, lanserade förbättrad e-handel 2020.",
+      "url": "https://antrop.se/case/kundinsikter-ledde-till-mer-lattnavigerad-e-handel-for-ahlens/"
+    },
+    {
+      "title": "Digital design för ett sista avsked",
+      "client": "Fonus",
+      "sector": "Begravning",
+      "services": ["Digital design", "UX-design", "Användningstester"],
+      "challenge": "Planering av begravning involverar många beslut under en emotionellt svår period. Fonus behövde modernisera sin tjänst med en digital plattform som förenklar processen.",
+      "outcome": "Levererade omfattande koncept och färdplan för Fonus nya digitala tjänst, grundad i användarforskning med designprinciper, gränssnittsskisser och prioriterad feature-roadmap.",
+      "url": "https://antrop.se/case/digital-design-for-ett-sista-avsked/"
+    },
+    {
+      "title": "Så blir Sidas arbete för Agenda 2030 snabbare och mer innovativt",
+      "client": "Sida",
+      "sector": "Offentlig",
+      "services": ["Innovationslabb", "Innovationsledning", "Tjänstedesign", "Framsyn och spekulativ design"],
+      "challenge": "Sida behövde accelerera framsteg mot Agenda 2030-målen och modernisera som organisation. De insåg att nuvarande arbete inte var tillräckligt och krävde nya metoder.",
+      "outcome": "Etablerade Sida Lab som skyddat utrymme för experiment med ~20 innovationsprojekt från Bangladesh textil till Uganda klimatdata. Förändrade organisationskultur med växande internt intresse.",
+      "url": "https://antrop.se/case/sa-blir-sidas-arbete-for-agenda-2030-snabbare-och-mer-innovativt/"
+    }
+  ]
+}

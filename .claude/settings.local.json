@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:antrop.se)",
+      "WebFetch(domain:www.antrop.se)",
+      "WebSearch",
+      "WebFetch(domain:antrop.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
