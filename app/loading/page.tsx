@@ -12,7 +12,7 @@ const loadingPhrases = [
   'tittar i arkivet',
   'samlar användarinsikter',
   'skissar prototyper',
-  'kollar precedensfall',
+  'kollar tidigare case',
   'förbereder förslag',
 ];
 

@@ -592,8 +592,16 @@ async function sendSlackNotification(
     const summaryItems = [
       `• *Greeting:* ${greetingPreview.replace(/^>/, '')}`,
       `• *Förslag på aktiviteter:* ${response.approach.length} st`,
-      `• *Case-exempel:* ${response.caseExamples.length} st`,
     ];
+
+    // Add each activity title
+    if (response.approach.length > 0) {
+      response.approach.forEach((activity, index) => {
+        summaryItems.push(`  ${index + 1}. ${activity.title}`);
+      });
+    }
+
+    summaryItems.push(`• *Case-exempel:* ${response.caseExamples.length} st`);
 
     if (isPublicSector) {
       summaryItems.push(`• *⚠️ Offentlig sektor:* Sara Nero-svar skickat`);
