@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Antrop Bot",
-  description: "Din AI-drivna ledsgenerering från Antrop",
+  description: "Se hur Antrop kan hjälpa dig",
 };
 
 export default function RootLayout({
