@@ -520,21 +520,105 @@ async function sendSlackNotification(
   response: AIResponse
 ): Promise<void> {
   try {
-    const baseUrl = process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000';
+    const webhookUrl = process.env.SLACK_WEBHOOK_URL;
 
-    await fetch(`${baseUrl}/api/slack-notify`, {
+    if (!webhookUrl) {
+      console.warn('SLACK_WEBHOOK_URL not configured, skipping notification');
+      return;
+    }
+
+    // Check if this is a public sector inquiry
+    const isPublicSector = response.hideContactForm === true;
+
+    // Format timestamp in Swedish timezone
+    const time = new Date().toLocaleString('sv-SE', {
+      timeZone: 'Europe/Stockholm',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+
+    // Truncate greeting for preview
+    const greetingPreview =
+      response.greeting.length > 100
+        ? response.greeting.substring(0, 100) + '...'
+        : response.greeting;
+
+    // Build message blocks
+    const blocks = [
+      {
+        type: 'header',
+        text: {
+          type: 'plain_text',
+          text: isPublicSector ? '🏛️ Ny Upphandlingsfråga' : '🎯 Ny Lead från Antrop Bot',
+          emoji: true,
+        },
+      },
+      {
+        type: 'section',
+        fields: [
+          {
+            type: 'mrkdwn',
+            text: `*📍 Företag:*\n${workplace}`,
+          },
+          {
+            type: 'mrkdwn',
+            text: `*⏰ Tid:*\n${time}`,
+          },
+        ],
+      },
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `*📝 Behov:*\n${need}`,
+        },
+      },
+      {
+        type: 'divider',
+      },
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: `*🤖 AI-svar sammanfattning:*`,
+        },
+      },
+    ];
+
+    // Add response summary
+    const summaryItems = [
+      `• *Greeting:* ${greetingPreview.replace(/^>/, '')}`,
+      `• *Förslag på aktiviteter:* ${response.approach.length} st`,
+      `• *Case-exempel:* ${response.caseExamples.length} st`,
+    ];
+
+    if (isPublicSector) {
+      summaryItems.push(`• *⚠️ Offentlig sektor:* Sara Nero-svar skickat`);
+    }
+
+    blocks.push({
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: summaryItems.join('\n'),
+      },
+    });
+
+    const slackMessage = {
+      blocks,
+      text: `Ny lead från ${workplace}: ${need.substring(0, 50)}...`, // Fallback text
+    };
+
+    // Send to Slack
+    await fetch(webhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        workplace,
-        need,
-        response,
-        timestamp: new Date().toISOString(),
-      }),
+      body: JSON.stringify(slackMessage),
     });
   } catch (error) {
     // Log but don't throw - this is fire-and-forget
