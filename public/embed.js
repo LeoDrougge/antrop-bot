@@ -105,14 +105,17 @@
           flex-direction: column-reverse !important;
           gap: 2rem !important;
           box-sizing: border-box !important;
+          align-items: flex-start !important;
         ">
           <!-- Left Column - Form -->
           <div style="
             display: flex !important;
             flex-direction: column !important;
             gap: 3rem !important;
-            flex: 1 !important;
+            flex: 0 1 auto !important;
             box-sizing: border-box !important;
+            width: 100% !important;
+            min-height: fit-content !important;
           ">
             <!-- Text -->
             <div class="antrop-widget-text" style="
@@ -268,6 +271,10 @@
             flex-direction: row !important;
             align-items: flex-start !important;
             justify-content: space-between !important;
+          }
+          .antrop-widget-content > div:first-child {
+            flex: 1 !important;
+            width: auto !important;
           }
           .antrop-widget-content > div:last-child {
             width: auto !important;
