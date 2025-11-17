@@ -452,7 +452,7 @@ export default function Result() {
         {response.caseExamples && response.caseExamples.length > 0 && (
           <section className="space-y-6">
             <h3 ref={caseHeaderRef} className="header-sm opacity-0" style={{ color: 'var(--text-regular)' }}>
-            Case
+            Hur vi har löst liknande uppgifter tidigare
             </h3>
 
             <div>
@@ -574,7 +574,7 @@ export default function Result() {
           >
             <div className="space-y-2">
               <h4 className="header-sm" style={{ color: 'var(--text-regular)' }}>
-                Kontakta mig direkt
+                Kontakta Sara direkt
               </h4>
               <div className="text-antrop-regular space-y-1" style={{ color: 'var(--text-muted)' }}>
                 <p>
