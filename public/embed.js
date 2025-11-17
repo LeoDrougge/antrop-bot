@@ -341,8 +341,9 @@
     });
 
     // Get elements - wait a bit for DOM to be ready
-    const workplaceInput = container.querySelector('.antrop-widget-input:first-of-type');
-    const needInput = container.querySelector('.antrop-widget-input:last-of-type');
+    const inputs = container.querySelectorAll('.antrop-widget-input');
+    const workplaceInput = inputs[0];
+    const needInput = inputs[1];
     const button = container.querySelector('.antrop-widget-button');
 
     // Check if elements exist before adding event listeners
