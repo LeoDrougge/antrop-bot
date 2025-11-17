@@ -137,14 +137,15 @@
                 data-placeholder="MIN ARBETSPLATS"
                 style="
                   font-family: 'Martian Mono', monospace !important;
-                  color: #AFDDD9 !important;
+                  color: #6B8E8A !important;
                   text-decoration: underline !important;
                   text-underline-offset: 0.2em !important;
                   text-decoration-skip-ink: none !important;
                   outline: none !important;
                   min-width: 200px !important;
-                  cursor: text !important;
+                  cursor: url('${baseUrl}/Assets/pen-cursor-small.png') 8 40, text !important;
                   caret-color: #08F9F9 !important;
+                  display: inline-block !important;
                 "
                 onfocus="this.style.color='#AFDDD9'"
                 onblur="if(!this.textContent.trim()) this.style.color='#6B8E8A'"
@@ -156,14 +157,15 @@
                 data-placeholder="MIN UTMANING"
                 style="
                   font-family: 'Martian Mono', monospace !important;
-                  color: #AFDDD9 !important;
+                  color: #6B8E8A !important;
                   text-decoration: underline !important;
                   text-underline-offset: 0.2em !important;
                   text-decoration-skip-ink: none !important;
                   outline: none !important;
                   min-width: 200px !important;
-                  cursor: text !important;
+                  cursor: url('${baseUrl}/Assets/pen-cursor-small.png') 8 40, text !important;
                   caret-color: #08F9F9 !important;
+                  display: inline-block !important;
                 "
                 onfocus="this.style.color='#AFDDD9'"
                 onblur="if(!this.textContent.trim()) this.style.color='#6B8E8A'"
@@ -228,7 +230,6 @@
           <div class="antrop-widget-image" style="
             display: flex !important;
             align-items: center !important;
-            justify-content: center !important;
             flex-shrink: 0 !important;
             box-sizing: border-box !important;
           ">
@@ -271,6 +272,17 @@
 
         .antrop-widget-image {
           width: 100% !important;
+          justify-content: center !important;
+        }
+
+        /* Placeholder styling */
+        .antrop-widget-input:empty::before {
+          content: attr(data-placeholder) !important;
+          color: #6B8E8A !important;
+        }
+
+        .antrop-widget-input:focus::before {
+          display: none !important;
         }
 
         @media (min-width: 640px) {
@@ -325,43 +337,46 @@
     const needInput = container.querySelector('.antrop-widget-input:last-of-type');
     const button = container.querySelector('.antrop-widget-button');
 
-    // Handle placeholder
-    function handlePlaceholder(element) {
-      if (!element.textContent.trim()) {
-        element.textContent = '';
-        element.style.color = '#6B8E8A';
-      } else {
-        element.style.color = '#AFDDD9';
-      }
-    }
-
-    // Set up placeholders
+    // Set up placeholders and cursor
+    const penCursorUrl = `${baseUrl}/Assets/pen-cursor-small.png`;
     [workplaceInput, needInput].forEach((input) => {
+      // Set pen cursor on hover and focus
+      input.addEventListener('mouseenter', function() {
+        this.style.cursor = `url('${penCursorUrl}') 8 40, text`;
+      });
       input.addEventListener('focus', function () {
-        if (this.textContent === this.dataset.placeholder) {
-          this.textContent = '';
-        }
+        this.style.cursor = `url('${penCursorUrl}') 8 40, text`;
         this.style.color = '#AFDDD9';
+        // Select all text on focus (like in main app)
+        const range = document.createRange();
+        const sel = window.getSelection();
+        range.selectNodeContents(this);
+        sel?.removeAllRanges();
+        sel?.addRange(range);
       });
 
       input.addEventListener('blur', function () {
         if (!this.textContent.trim()) {
-          this.textContent = this.dataset.placeholder;
+          this.textContent = '';
           this.style.color = '#6B8E8A';
+        } else {
+          this.style.color = '#AFDDD9';
         }
       });
 
       input.addEventListener('input', function () {
-        handlePlaceholder(this);
+        if (this.textContent.trim()) {
+          this.style.color = '#AFDDD9';
+        } else {
+          this.style.color = '#6B8E8A';
+        }
         updateButtonState();
         updateWidgetHeight();
       });
 
-      // Initial placeholder
-      if (!input.textContent.trim()) {
-        input.textContent = input.dataset.placeholder;
-        input.style.color = '#6B8E8A';
-      }
+      // Initial state - empty so CSS ::before shows placeholder
+      input.textContent = '';
+      input.style.color = '#6B8E8A';
     });
 
     // Update widget height based on content
