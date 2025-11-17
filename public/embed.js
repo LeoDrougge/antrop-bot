@@ -225,12 +225,11 @@
           </div>
 
           <!-- Right Column - Image -->
-          <div style="
+          <div class="antrop-widget-image" style="
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
             flex-shrink: 0 !important;
-            width: 100% !important;
             box-sizing: border-box !important;
           ">
             <img 
@@ -270,6 +269,10 @@
           overflow: visible !important;
         }
 
+        .antrop-widget-image {
+          width: 100% !important;
+        }
+
         @media (min-width: 640px) {
           .antrop-widget-content {
             flex-direction: row !important;
@@ -280,8 +283,9 @@
             flex: 1 !important;
             width: auto !important;
           }
-          .antrop-widget-content > div:last-child {
+          .antrop-widget-image {
             width: auto !important;
+            justify-content: flex-start !important;
           }
         }
       </style>
