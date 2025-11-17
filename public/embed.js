@@ -35,100 +35,132 @@
         ? 'http://localhost:3000'
         : 'https://antrop-leadsgenerator-4syq.vercel.app';
 
+    // Load Martian Mono font if not already loaded
+    if (!document.getElementById('antrop-widget-font')) {
+      const link = document.createElement('link');
+      link.id = 'antrop-widget-font';
+      link.rel = 'stylesheet';
+      link.href = 'https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500&display=swap';
+      document.head.appendChild(link);
+    }
+
     // Create widget HTML
     const widgetHTML = `
       <div class="antrop-widget" style="
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        color: #AFDDD9;
-        background-color: #001A1A;
+        font-family: 'Martian Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, monospace !important;
+        color: #AFDDD9 !important;
+        background-color: #001A1A !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 0 !important;
       ">
         <!-- Header -->
         <div class="antrop-widget-header" style="
-          height: 72px;
-          display: flex;
-          border-bottom: 1px dashed #064848;
-          margin-bottom: 2rem;
+          height: 72px !important;
+          display: flex !important;
+          border-bottom: 1px dashed #064848 !important;
+          margin-bottom: 2rem !important;
+          box-sizing: border-box !important;
         ">
           <div style="
-            flex: 1;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px dashed #064848;
+            flex: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+            border-bottom: 1px dashed #064848 !important;
+            box-sizing: border-box !important;
           ">
             <span style="
-              font-size: 0.875rem;
-              font-weight: 500;
-              color: #6B8E8A;
+              font-family: 'Martian Mono', monospace !important;
+              font-size: 0.875rem !important;
+              font-weight: 500 !important;
+              color: #6B8E8A !important;
+              text-transform: uppercase !important;
+              letter-spacing: -0.2px !important;
+              line-height: 150% !important;
             ">Antrop bot</span>
           </div>
           <div style="
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            border-bottom: 1px dashed #064848;
+            flex: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            border-bottom: 1px dashed #064848 !important;
+            box-sizing: border-box !important;
           ">
             <span style="
-              font-size: 0.875rem;
-              font-weight: 500;
-              color: #6B8E8A;
+              font-family: 'Martian Mono', monospace !important;
+              font-size: 0.875rem !important;
+              font-weight: 500 !important;
+              color: #6B8E8A !important;
+              text-transform: uppercase !important;
+              letter-spacing: -0.2px !important;
+              line-height: 150% !important;
             ">v 0.2</span>
           </div>
         </div>
 
         <!-- Content -->
         <div class="antrop-widget-content" style="
-          display: flex;
-          flex-direction: column-reverse;
-          gap: 2rem;
+          display: flex !important;
+          flex-direction: column-reverse !important;
+          gap: 2rem !important;
+          box-sizing: border-box !important;
         ">
           <!-- Left Column - Form -->
           <div style="
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            flex: 1;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 3rem !important;
+            flex: 1 !important;
+            box-sizing: border-box !important;
           ">
             <!-- Text -->
             <div class="antrop-widget-text" style="
-              font-size: clamp(1.5rem, 4vw, 2.5rem);
-              font-weight: 500;
-              line-height: 1.4;
-              color: #AFDDD9;
-              display: flex;
-              flex-wrap: wrap;
-              gap: 0.5em;
+              font-family: 'Martian Mono', monospace !important;
+              font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+              font-weight: 400 !important;
+              line-height: 1.5 !important;
+              color: #AFDDD9 !important;
+              display: flex !important;
+              flex-wrap: wrap !important;
+              gap: 0.5em !important;
+              text-transform: uppercase !important;
+              letter-spacing: -0.56px !important;
             ">
-              <span style="white-space: nowrap;">JAG KOMMER FRÅN</span>
+              <span style="white-space: nowrap !important;">JAG KOMMER FRÅN</span>
               <span
                 class="antrop-widget-input"
                 contenteditable="true"
                 data-placeholder="MIN ARBETSPLATS"
                 style="
-                  color: #AFDDD9;
-                  text-decoration: underline;
-                  text-underline-offset: 0.2em;
-                  outline: none;
-                  min-width: 200px;
-                  cursor: text;
-                  caret-color: #08F9F9;
+                  font-family: 'Martian Mono', monospace !important;
+                  color: #AFDDD9 !important;
+                  text-decoration: underline !important;
+                  text-underline-offset: 0.2em !important;
+                  text-decoration-skip-ink: none !important;
+                  outline: none !important;
+                  min-width: 200px !important;
+                  cursor: text !important;
+                  caret-color: #08F9F9 !important;
                 "
                 onfocus="this.style.color='#AFDDD9'"
                 onblur="if(!this.textContent.trim()) this.style.color='#6B8E8A'"
               ></span>
-              <span style="white-space: nowrap;">OCH BEHÖVER HJÄLP MED</span>
+              <span style="white-space: nowrap !important;">OCH BEHÖVER HJÄLP MED</span>
               <span
                 class="antrop-widget-input"
                 contenteditable="true"
                 data-placeholder="MIN UTMANING"
                 style="
-                  color: #AFDDD9;
-                  text-decoration: underline;
-                  text-underline-offset: 0.2em;
-                  outline: none;
-                  min-width: 200px;
-                  cursor: text;
-                  caret-color: #08F9F9;
+                  font-family: 'Martian Mono', monospace !important;
+                  color: #AFDDD9 !important;
+                  text-decoration: underline !important;
+                  text-underline-offset: 0.2em !important;
+                  text-decoration-skip-ink: none !important;
+                  outline: none !important;
+                  min-width: 200px !important;
+                  cursor: text !important;
+                  caret-color: #08F9F9 !important;
                 "
                 onfocus="this.style.color='#AFDDD9'"
                 onblur="if(!this.textContent.trim()) this.style.color='#6B8E8A'"
@@ -137,63 +169,76 @@
 
             <!-- Button and Disclaimer -->
             <div style="
-              display: flex;
-              flex-direction: column;
-              gap: 0.5rem;
+              display: flex !important;
+              flex-direction: column !important;
+              gap: 0.5rem !important;
+              box-sizing: border-box !important;
             ">
               <button
                 class="antrop-widget-button"
+                type="button"
                 style="
-                  font-size: 1rem;
-                  font-weight: 500;
-                  display: inline-flex;
-                  align-items: center;
-                  justify-content: center;
-                  gap: 1.75rem;
-                  padding: 1rem 3rem;
-                  border-radius: 9999px;
-                  background-color: #AFDDD9;
-                  color: #001A1A;
-                  border: 1.283px solid #0f3951;
-                  cursor: pointer;
-                  transition: opacity 0.2s;
-                  width: 100%;
-                  max-width: 308px;
+                  font-family: 'Martian Mono', monospace !important;
+                  font-size: 1rem !important;
+                  font-weight: 500 !important;
+                  display: inline-flex !important;
+                  align-items: center !important;
+                  justify-content: center !important;
+                  gap: 1.75rem !important;
+                  padding: 1rem 3rem !important;
+                  border-radius: 9999px !important;
+                  background-color: #AFDDD9 !important;
+                  color: #001A1A !important;
+                  border: 1.283px solid #0f3951 !important;
+                  cursor: pointer !important;
+                  transition: opacity 0.2s !important;
+                  width: 100% !important;
+                  max-width: 308px !important;
+                  text-transform: uppercase !important;
+                  letter-spacing: -0.2px !important;
+                  line-height: 150% !important;
+                  margin: 0 !important;
                 "
                 onmouseover="this.style.opacity='0.9'"
                 onmouseout="this.style.opacity='1'"
               >
                 <span>Se hur vi kan hjälpa dig</span>
-                <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0 !important; display: block !important;">
                   <path d="M16.5 1L25 11L16.5 21M25 11H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
 
               <!-- AI Disclaimer -->
               <p style="
-                font-size: 1rem;
-                line-height: 1.5;
-                color: #6B8E8A;
-                margin: 0;
+                font-family: 'Martian Mono', monospace !important;
+                font-size: 1rem !important;
+                font-weight: 400 !important;
+                line-height: 160% !important;
+                letter-spacing: -0.64px !important;
+                color: #6B8E8A !important;
+                margin: 0 !important;
               ">Svaren skapas med hjälp av AI.</p>
             </div>
           </div>
 
           <!-- Right Column - Image -->
           <div style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            width: 100%;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-shrink: 0 !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
           ">
             <img 
               src="${baseUrl}/Assets/start-illu.png" 
               alt="Start illustration"
               style="
-                width: 218px;
-                height: 196px;
-                object-fit: contain;
+                width: 218px !important;
+                height: 196px !important;
+                object-fit: contain !important;
+                display: block !important;
+                box-sizing: border-box !important;
               "
             />
           </div>
@@ -201,11 +246,28 @@
       </div>
 
       <style>
+        /* Reset and isolation for widget */
+        .antrop-widget,
+        .antrop-widget *,
+        .antrop-widget *::before,
+        .antrop-widget *::after {
+          box-sizing: border-box !important;
+        }
+
+        /* Prevent WordPress theme interference */
+        .antrop-widget {
+          all: initial;
+          display: block !important;
+          font-family: 'Martian Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, monospace !important;
+          color: #AFDDD9 !important;
+          background-color: #001A1A !important;
+        }
+
         @media (min-width: 640px) {
           .antrop-widget-content {
             flex-direction: row !important;
-            align-items: flex-start;
-            justify-content: space-between;
+            align-items: flex-start !important;
+            justify-content: space-between !important;
           }
           .antrop-widget-content > div:last-child {
             width: auto !important;
