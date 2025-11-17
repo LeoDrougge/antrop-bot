@@ -102,7 +102,7 @@
         <!-- Content -->
         <div class="antrop-widget-content" style="
           display: flex !important;
-          flex-direction: column !important;
+          flex-direction: column-reverse !important;
           gap: 2rem !important;
           box-sizing: border-box !important;
           align-items: flex-start !important;
