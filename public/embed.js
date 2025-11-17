@@ -340,10 +340,21 @@
       }
     });
 
-    // Get elements
+    // Get elements - wait a bit for DOM to be ready
     const workplaceInput = container.querySelector('.antrop-widget-input:first-of-type');
     const needInput = container.querySelector('.antrop-widget-input:last-of-type');
     const button = container.querySelector('.antrop-widget-button');
+
+    // Check if elements exist before adding event listeners
+    if (!workplaceInput || !needInput || !button) {
+      console.error('Widget elements not found:', {
+        workplaceInput: !!workplaceInput,
+        needInput: !!needInput,
+        button: !!button,
+        containerHTML: container.innerHTML.substring(0, 200)
+      });
+      return;
+    }
 
     // Set up placeholders and cursor
     const penCursorUrl = `${baseUrl}/Assets/pen-cursor-small.png`;
@@ -424,6 +435,7 @@
     // Handle submit
     button.addEventListener('click', function (e) {
       e.preventDefault();
+      e.stopPropagation();
 
       const workplace = workplaceInput.textContent.trim();
       const need = needInput.textContent.trim();
@@ -444,7 +456,13 @@
         need: encodeURIComponent(need),
       });
 
-      window.open(`${baseUrl}/loading?${params.toString()}`, '_blank');
+      const url = `${baseUrl}/loading?${params.toString()}`;
+      const newWindow = window.open(url, '_blank');
+      
+      // If popup was blocked, try alternative method
+      if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+        window.location.href = url;
+      }
     });
 
     // Initial button state
