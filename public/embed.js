@@ -308,7 +308,7 @@
             padding: 16px !important;
           }
           .antrop-widget-text {
-            font-size: 28px !important;
+            font-size: 24px !important;
           }
           .antrop-widget-text-fixed {
             white-space: normal !important;
