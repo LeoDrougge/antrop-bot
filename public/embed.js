@@ -265,6 +265,12 @@
           padding: 64px !important;
         }
 
+        @media (max-width: 1050px) {
+          .antrop-widget {
+            min-height: 760px !important;
+          }
+        }
+
         .antrop-widget-image {
           width: 100% !important;
           justify-content: center !important;
@@ -327,7 +333,10 @@
     const widget = container.querySelector('.antrop-widget');
     if (widget) {
       widget.style.setProperty('height', 'auto', 'important');
-      widget.style.setProperty('min-height', '640px', 'important');
+      // Set min-height based on viewport width
+      const minHeight = window.innerWidth <= 1050 ? '760px' : '640px';
+      widget.style.setProperty('min-height', minHeight, 'important');
+      container.style.setProperty('min-height', minHeight, 'important');
       widget.style.setProperty('max-height', 'none', 'important');
       widget.style.setProperty('overflow', 'visible', 'important');
     }
