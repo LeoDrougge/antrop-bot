@@ -265,9 +265,15 @@
           padding: 64px !important;
         }
 
-        @media (max-width: 1050px) {
+        @media (max-width: 1262px) {
           .antrop-widget {
             min-height: 760px !important;
+          }
+        }
+
+        @media (max-height: 624px) {
+          .antrop-widget {
+            min-height: 820px !important;
           }
         }
 
