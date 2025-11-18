@@ -332,19 +332,7 @@
       widget.style.setProperty('overflow', 'visible', 'important');
     }
 
-    // Calculate and set minimum height based on content
-    // Use requestAnimationFrame to ensure DOM is fully rendered
-    requestAnimationFrame(() => {
-      if (widget) {
-        const scrollHeight = widget.scrollHeight;
-        if (scrollHeight > 0) {
-          // Use max of scrollHeight and 640px to ensure minimum height
-          const minHeight = Math.max(scrollHeight, 640);
-          widget.style.setProperty('min-height', minHeight + 'px', 'important');
-          container.style.setProperty('min-height', minHeight + 'px', 'important');
-        }
-      }
-    });
+    // Let CSS handle height - widget will naturally expand based on content
 
     // Get elements - wait a bit for DOM to be ready
     const inputs = container.querySelectorAll('.antrop-widget-input');
@@ -397,28 +385,12 @@
           this.style.color = '#6B8E8A';
         }
         updateButtonState();
-        updateWidgetHeight();
       });
 
       // Initial state - empty so CSS ::before shows placeholder
       input.textContent = '';
       input.style.color = '#6B8E8A';
     });
-
-    // Update widget height based on content
-    function updateWidgetHeight() {
-      if (widget) {
-        requestAnimationFrame(() => {
-          const scrollHeight = widget.scrollHeight;
-          if (scrollHeight > 0) {
-            // Use max of scrollHeight and 870px to ensure minimum height
-            const minHeight = Math.max(scrollHeight, 870);
-            widget.style.setProperty('min-height', minHeight + 'px', 'important');
-            container.style.setProperty('min-height', minHeight + 'px', 'important');
-          }
-        });
-      }
-    }
 
     // Update button state
     function updateButtonState() {
