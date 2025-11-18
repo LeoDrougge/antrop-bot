@@ -200,7 +200,7 @@
                 onmouseover="this.style.opacity='0.9'"
                 onmouseout="this.style.opacity='1'"
               >
-                <span>Se hur vi kan hjälpa dig</span>
+                <span>Se hur vi kan hjälpa</span>
                 <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0 !important; display: block !important;">
                   <path d="M16.5 1L25 11L16.5 21M25 11H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
