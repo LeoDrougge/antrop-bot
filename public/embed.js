@@ -259,7 +259,7 @@
           color: #AFDDD9 !important;
           background-color: #003535 !important;
           height: auto !important;
-          min-height: auto !important;
+          min-height: 640px !important;
           max-height: none !important;
           overflow: visible !important;
           padding: 64px !important;
@@ -327,7 +327,7 @@
     const widget = container.querySelector('.antrop-widget');
     if (widget) {
       widget.style.setProperty('height', 'auto', 'important');
-      widget.style.setProperty('min-height', 'auto', 'important');
+      widget.style.setProperty('min-height', '640px', 'important');
       widget.style.setProperty('max-height', 'none', 'important');
       widget.style.setProperty('overflow', 'visible', 'important');
     }
