@@ -300,8 +300,8 @@ export default function Loading() {
         <div className="mx-auto flex max-w-[1268px] flex-col gap-16 page-container py-20 relative z-10">
 
         {/* Loading text */}
-        <div>
-          <h1 className="header-antrop-lg" style={{ color: 'var(--text-regular)' }}>
+        <div className="text-left w-full">
+          <h1 className="header-antrop-lg text-left" style={{ color: 'var(--text-regular)', textAlign: 'left' }}>
             <span ref={cursorRef}>&gt;</span>
             <span ref={textRef}>{loadingPhrases[currentPhraseIndex]}</span>
           </h1>

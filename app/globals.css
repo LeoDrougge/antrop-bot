@@ -278,3 +278,14 @@
     padding-right: 0;
   }
 }
+
+/* Header top margin - responsive */
+.header-top-margin {
+  margin-top: 20px;
+}
+
+@media (min-width: 640px) {
+  .header-top-margin {
+    margin-top: 64px;
+  }
+}

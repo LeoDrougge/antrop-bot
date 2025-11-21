@@ -6,18 +6,17 @@ import Image from 'next/image';
 export default function Header() {
   return (
     <div 
-      className="w-full max-w-[1268px] mx-auto flex page-container"
+      className="w-full max-w-[1268px] mx-auto flex page-container header-top-margin"
       style={{ 
-        marginTop: '64px',
         height: '96px'
       }}
     >
       {/* Left section with logo and text */}
       <div 
-        className="flex-1 flex items-center border-b border-dashed relative"
+        className="flex-1 flex items-center border-b border-dashed relative w-full sm:w-auto"
         style={{ borderColor: 'var(--outline_muted)' }}
       >
-        <div className="flex items-center gap-[18px] pl-0">
+        <div className="flex items-center gap-[18px] pl-0 w-full sm:w-auto">
           {/* Logo */}
           <a 
             href="https://www.antrop.se" 
@@ -55,7 +54,7 @@ export default function Header() {
       
       {/* Right section - empty but with border */}
       <div 
-        className="flex-1 flex items-center justify-end border-b border-dashed"
+        className="hidden sm:flex flex-1 items-center justify-end border-b border-dashed"
         style={{ borderColor: 'var(--outline_muted)' }}
       >
       </div>
