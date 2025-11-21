@@ -401,6 +401,14 @@
         updateButtonState();
       });
 
+      // Prevent line breaks on Enter key
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          return false;
+        }
+      });
+
       // Initial state - empty so CSS ::before shows placeholder
       input.textContent = '';
       input.style.color = '#6B8E8A';
