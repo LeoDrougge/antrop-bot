@@ -3,11 +3,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { FramedBlock } from '@/components/exempel/FramedBlock';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import Header from '@/components/Header';
 
 interface AIResponse {
   greeting: string;
@@ -72,6 +72,9 @@ export default function Result() {
 
   useEffect(() => {
     if (!response) return;
+
+    // Register SplitText plugin
+    gsap.registerPlugin(SplitText);
 
     // Animate greeting with typewriter effect
     if (greetingRef.current) {
@@ -355,41 +358,36 @@ export default function Result() {
 
   return (
     <main style={{ backgroundColor: 'var(--app_background)' }} className="min-h-screen">
-      <div className="mx-auto flex max-w-[944px] flex-col gap-16 px-6 py-20">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <Link href="/" className="header-sm cursor-pointer hover:opacity-80 transition-opacity" style={{ color: 'var(--text-muted)' }}>
-            Antrop Bot
-          </Link>
-          <p className="header-sm" style={{ color: 'var(--text-muted)' }}>
-            v 0.2
-          </p>
-        </div>
+      <div className="flex flex-col">
+        <Header />
+        
+        <div className="mx-auto flex max-w-[1268px] w-full flex-col gap-16 page-container py-20">
+          {/* Greeting */}
+          <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-xl space-y-6">
+              <h1
+                ref={greetingRef}
+                className="header-antrop-lg"
+                style={{ color: 'var(--text-regular)' }}
+              >
+                {response.greeting}
+              </h1>
+            </div>
 
-        {/* Greeting */}
-        <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-xl space-y-6">
-            <h1
-              ref={greetingRef}
-              className="header-antrop-lg"
-              style={{ color: 'var(--text-regular)' }}
-            >
-              {response.greeting}
-            </h1>
+            <div ref={heroImageRef} className="shrink-0" style={{ width: '294px', height: '208px' }}>
+              <Image
+                src="/Assets/digital-design-01.png"
+                alt="Illustration av digital design"
+                width={294}
+                height={208}
+                className="w-full h-full object-contain"
+                priority
+              />
+            </div>
           </div>
 
-          <div ref={heroImageRef} className="shrink-0" style={{ width: '218px', height: '196px' }}>
-            <Image
-              src="/Assets/digital-design-01.png"
-              alt="Illustration av digital design"
-              width={218}
-              height={196}
-              className="w-full h-full object-contain"
-              priority
-            />
-          </div>
-        </div>
-
+        {/* Content container with max-width 944px - left aligned */}
+        <div className="w-full max-w-[944px] flex flex-col gap-16">
         {/* Understanding */}
         <section className="space-y-6">
           <p ref={understandingHeaderRef} className="header-sm opacity-0" style={{ color: 'var(--text-regular)' }}>
@@ -576,6 +574,9 @@ export default function Result() {
               <h4 className="header-sm" style={{ color: 'var(--text-regular)' }}>
                 Kontakta Sara direkt
               </h4>
+              <p className="text-antrop-regular" style={{ color: 'var(--text-muted)' }}>
+                Sara Nero, Affärsområdeschef
+              </p>
               <div className="text-antrop-regular space-y-1" style={{ color: 'var(--text-muted)' }}>
                 <p>
                   <a href="mailto:sara.nero@antrop.se" className="hover:underline" style={{ color: 'var(--text-regular)' }}>
@@ -599,13 +600,13 @@ export default function Result() {
           </p>
         </div>
 
-        {/* Reset Button */}
-        <div ref={resetButtonRef} className="text-center opacity-0">
+        {/* Reset Button and Visit Site Button */}
+        <div ref={resetButtonRef} className="text-center opacity-0 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             onClick={handleNewQuestion}
             variant="outline"
             size="lg"
-            className="rounded-full px-8 py-6 text-base"
+            className="rounded-full px-8 py-6 text-base cursor-pointer hover:opacity-80 transition-opacity"
             style={{
               borderColor: 'var(--text-regular)',
               color: 'var(--text-regular)',
@@ -614,6 +615,21 @@ export default function Result() {
           >
             Ställ en ny fråga
           </Button>
+          <Button
+            onClick={() => window.open('https://www.antrop.se', '_blank')}
+            variant="outline"
+            size="lg"
+            className="rounded-full px-8 py-6 text-base cursor-pointer hover:opacity-80 transition-opacity"
+            style={{
+              borderColor: 'var(--text-regular)',
+              color: 'var(--text-regular)',
+              backgroundColor: 'transparent',
+            }}
+          >
+            Besök antrop.se
+          </Button>
+        </div>
+        </div>
         </div>
       </div>
     </main>

@@ -258,3 +258,23 @@
   background-position: right top;
   background-repeat: no-repeat;
 }
+
+/* Container padding for start and loading pages */
+.page-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (min-width: 1268px) {
+  .page-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

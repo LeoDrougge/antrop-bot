@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
+import Header from '@/components/Header';
 
 const loadingPhrases = [
   'analyserar era behov',
@@ -294,16 +294,10 @@ export default function Loading() {
       {/* Particles container */}
       <div ref={particlesContainerRef} className="absolute inset-0 pointer-events-none" />
       
-      <div className="mx-auto flex max-w-[944px] flex-col gap-16 px-6 py-20 relative z-10">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <Link href="/" className="header-sm cursor-pointer hover:opacity-80 transition-opacity" style={{ color: 'var(--text-muted)' }}>
-            Antrop Bot
-          </Link>
-          <p className="header-sm" style={{ color: 'var(--text-muted)' }}>
-            v 0.2
-          </p>
-        </div>
+      <div className="flex flex-col">
+        <Header />
+        
+        <div className="mx-auto flex max-w-[1268px] flex-col gap-16 page-container py-20 relative z-10">
 
         {/* Loading text */}
         <div>
@@ -311,6 +305,7 @@ export default function Loading() {
             <span ref={cursorRef}>&gt;</span>
             <span ref={textRef}>{loadingPhrases[currentPhraseIndex]}</span>
           </h1>
+        </div>
         </div>
       </div>
     </main>

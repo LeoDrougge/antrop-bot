@@ -59,6 +59,43 @@
       margin-bottom: 20px;
     }
 
+    .controls {
+      background: rgba(175, 221, 217, 0.1);
+      border: 1px solid #064848;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .controls h3 {
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+      color: #AFDDD9;
+    }
+
+    .controls label {
+      display: block;
+      margin-bottom: 12px;
+      color: #6B8E8A;
+      cursor: pointer;
+    }
+
+    .controls input[type="checkbox"] {
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    .controls input[type="number"] {
+      width: 80px;
+      padding: 5px 8px;
+      margin-left: 10px;
+      background: #001A1A;
+      border: 1px solid #064848;
+      border-radius: 4px;
+      color: #AFDDD9;
+      font-size: 0.9rem;
+    }
+
     .widget-container {
       background: rgba(0, 26, 26, 0.5);
       border: 1px dashed #064848;
@@ -125,8 +162,27 @@
       </p>
     </div>
 
+    <!-- WordPress Simulation Controls -->
+    <div class="controls">
+      <h3>🔧 WordPress Simulation Controls</h3>
+      <label>
+        <input type="checkbox" id="fixedHeight" checked>
+        Container har fast höjd (simulerar WordPress-problemet)
+        <input type="number" id="heightValue" value="500" min="200" max="1000" step="50">
+        px
+      </label>
+      <label>
+        <input type="checkbox" id="overflowHidden" checked>
+        overflow: hidden på container
+      </label>
+      <label>
+        <input type="checkbox" id="wordpressStyles">
+        Simulera WordPress CSS-resets (font-family, line-height, etc.)
+      </label>
+    </div>
+
     <!-- Widget Container - Detta är vad som kommer inbäddas i WordPress -->
-    <div class="widget-container">
+    <div class="widget-container" id="widgetContainer">
       <div data-antrop-widget></div>
     </div>
 
@@ -142,11 +198,59 @@
         <strong>Notera:</strong> Widgeten kommer automatiskt anpassa sig till er WordPress-sidas styling.
         Den använder inline-styles för att fungera oavsett tema.
       </p>
+      <p style="margin-top: 15px;">
+        <strong>Testa olika scenarion:</strong> Använd kontrollerna ovan för att simulera olika
+        WordPress-tema-inställningar (fast höjd, overflow: hidden, etc.) och se hur widgeten beter sig.
+      </p>
     </div>
   </div>
 
   <!-- Load widget script -->
   <script src="/embed.js"></script>
+
+  <!-- Control script -->
+  <script>
+    const container = document.getElementById('widgetContainer');
+    const fixedHeightCheckbox = document.getElementById('fixedHeight');
+    const heightInput = document.getElementById('heightValue');
+    const overflowCheckbox = document.getElementById('overflowHidden');
+    const wordpressStylesCheckbox = document.getElementById('wordpressStyles');
+
+    function updateContainer() {
+      // Fixed height
+      if (fixedHeightCheckbox.checked) {
+        container.style.height = heightInput.value + 'px';
+      } else {
+        container.style.height = 'auto';
+      }
+
+      // Overflow
+      if (overflowCheckbox.checked) {
+        container.style.overflow = 'hidden';
+      } else {
+        container.style.overflow = 'visible';
+      }
+
+      // WordPress CSS resets simulation
+      if (wordpressStylesCheckbox.checked) {
+        container.style.fontFamily = 'inherit';
+        container.style.fontSize = '16px';
+        container.style.lineHeight = '1.6';
+      } else {
+        container.style.fontFamily = '';
+        container.style.fontSize = '';
+        container.style.lineHeight = '';
+      }
+    }
+
+    fixedHeightCheckbox.addEventListener('change', updateContainer);
+    heightInput.addEventListener('input', updateContainer);
+    overflowCheckbox.addEventListener('change', updateContainer);
+    wordpressStylesCheckbox.addEventListener('change', updateContainer);
+
+    // Initial setup
+    updateContainer();
+  </script>
 </body>
 </html>
 

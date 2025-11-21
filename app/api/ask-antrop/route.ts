@@ -248,6 +248,7 @@ const GOVERNMENT_PATTERNS = ['kommun', 'stad', 'region', 'myndighet', 'myndighet
 
 // Common government agency abbreviations
 const GOVERNMENT_ABBREVIATIONS = [
+  'ams',
   'msb',
   'scb',
   'skr',

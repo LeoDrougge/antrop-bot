@@ -143,6 +143,7 @@
                   cursor: url('${baseUrl}/Assets/pen-cursor-small.png') 8 40, text !important;
                   caret-color: #08F9F9 !important;
                   display: inline-block !important;
+                  white-space: nowrap !important;
                 "
                 onfocus="this.style.color='#AFDDD9'"
                 onblur="if(!this.textContent.trim()) this.style.color='#6B8E8A'"
@@ -163,6 +164,7 @@
                   cursor: url('${baseUrl}/Assets/pen-cursor-small.png') 8 40, text !important;
                   caret-color: #08F9F9 !important;
                   display: inline-block !important;
+                  white-space: nowrap !important;
                 "
                 onfocus="this.style.color='#AFDDD9'"
                 onblur="if(!this.textContent.trim()) this.style.color='#6B8E8A'"
@@ -383,16 +385,42 @@
         sel?.addRange(range);
       });
 
-      input.addEventListener('blur', function () {
-        if (!this.textContent.trim()) {
-          this.textContent = '';
-          this.style.color = '#6B8E8A';
-        } else {
-          this.style.color = '#AFDDD9';
+      // Prevent line breaks - remove any existing line breaks (but keep spaces)
+      function removeLineBreaks(element) {
+        const text = element.textContent || element.innerText;
+        const cleaned = text.replace(/[\r\n]+/g, ' ');
+        if (text !== cleaned) {
+          element.textContent = cleaned;
+          // Move cursor to end
+          const range = document.createRange();
+          const sel = window.getSelection();
+          range.selectNodeContents(element);
+          range.collapse(false);
+          sel?.removeAllRanges();
+          sel?.addRange(range);
+        }
+      }
+
+      // Prevent Enter key and other line break methods
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
         }
       });
 
+      // Prevent line breaks from paste (but keep spaces)
+      input.addEventListener('paste', function (e) {
+        e.preventDefault();
+        const text = (e.clipboardData || window.clipboardData).getData('text');
+        const cleaned = text.replace(/[\r\n]+/g, ' ');
+        document.execCommand('insertText', false, cleaned);
+      });
+
+      // Remove any line breaks that might have been inserted
       input.addEventListener('input', function () {
+        removeLineBreaks(this);
         if (this.textContent.trim()) {
           this.style.color = '#AFDDD9';
         } else {
@@ -401,11 +429,14 @@
         updateButtonState();
       });
 
-      // Prevent line breaks on Enter key
-      input.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          return false;
+      // Also check on blur
+      input.addEventListener('blur', function () {
+        removeLineBreaks(this);
+        if (!this.textContent.trim()) {
+          this.textContent = '';
+          this.style.color = '#6B8E8A';
+        } else {
+          this.style.color = '#AFDDD9';
         }
       });
 
