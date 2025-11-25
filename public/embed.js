@@ -1,7 +1,7 @@
 /**
  * Antrop Bot Widget - Embeddable Script
  * Usage: <div data-antrop-widget></div>
- *        <script src="https://antrop-leadsgenerator-4syq.vercel.app/embed.js"></script>
+ *        <script src="https://antrop-bot.vercel.app/embed.js"></script>
  */
 
 (function () {
@@ -33,7 +33,7 @@
     const baseUrl =
       window.location.hostname === 'localhost'
         ? 'http://localhost:3000'
-        : 'https://antrop-leadsgenerator-4syq.vercel.app';
+        : 'https://antrop-bot.vercel.app';
 
     // Load Martian Mono font if not already loaded
     if (!document.getElementById('antrop-widget-font')) {
