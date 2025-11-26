@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     // Send email via Resend
     const { data, error } = await resend.emails.send({
       from: 'Antrop Kontakt <onboarding@resend.dev>', // Resend's test domain
-      to: ['sara.nero@antrop.se'],
+      to: ['leo.drougge@antrop.se'],
       replyTo: email,
       subject: 'nyfiken på samarbete',
       text: `Hej!
